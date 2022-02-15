@@ -146,6 +146,62 @@ li3.textContent = `Total ${getTotalSales(dubaiStoreArr)}`
 ul3.appendChild(li3);
 
 
+// THIS IS THE paris STORE
+let parisStoreArr = [];
+
+const parisStore = {
+location: 'dubai',
+minCust: 20,
+maxCust: 38,
+avgSale: 2.3,
+total: 0,
+getRandomNumberofCust: function(){
+   return Math.random() * (this.maxCust - this.minCust) + this.minCust;
+},
+getNumberofCookiesSoldperHour: function(){
+  for(let i=0;i<operatingHrs.length;i++){
+    let sales= Math.floor(this.avgSale*this.getRandomNumberofCust());
+    parisStoreArr.push(sales)
+    
+  }
+}
+}
+
+
+parisStore.getNumberofCookiesSoldperHour();
+
+console.log(parisStoreArr);
+console.log(parisStore);
+
+const article4 = document.createElement('article');
+parentElement.appendChild(article4);
+
+const h24 = document.createElement('h2');
+h24.textContent = parisStore.location;
+article.appendChild(h24);
+
+const ul4 = document.createElement('ul');
+article.appendChild(ul4);
+
+for (let i = 0; i < operatingHrs.length; i++) {
+  const li = document.createElement('li');
+  li.textContent = operatingHrs[i]+":"+parisStoreArr[i];
+  ul4.appendChild(li);
+}
+
+const li4 = document.createElement('li');
+li4.textContent = `Total ${getTotalSales(dubaiStoreArr)}`
+ul4.appendChild(li4);
+
+
+
+
+
+
+
+
+
+
 
 
 
