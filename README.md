@@ -1,5 +1,5 @@
-# LAB - 02
-# About-me
+# LAB - 06
+# Salmon Cookies
 ## I built a website called Salmon Cookies . Generates random numbers of customers and cookies sold. Then it displays the cookies sold per hour and at the end shows a total amount of cookies sold for each store.It does all of the things that it accomplishes well. I should describe the purpose and functionality so those that visit my README understand the app
 
 # Author: Abdinasir Yussuf
