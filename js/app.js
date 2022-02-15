@@ -150,7 +150,7 @@ ul3.appendChild(li3);
 let parisStoreArr = [];
 
 const parisStore = {
-location: 'dubai',
+location: 'paris',
 minCust: 20,
 maxCust: 38,
 avgSale: 2.3,
@@ -192,6 +192,70 @@ for (let i = 0; i < operatingHrs.length; i++) {
 const li4 = document.createElement('li');
 li4.textContent = `Total ${getTotalSales(dubaiStoreArr)}`
 ul4.appendChild(li4);
+
+
+
+// THIS IS THE lima STORE
+let limaStoreArr = [];
+
+const limaStore = {
+location: 'lima',
+minCust: 2,
+maxCust: 16,
+avgSale: 4.6,
+total: 0,
+getRandomNumberofCust: function(){
+   return Math.random() * (this.maxCust - this.minCust) + this.minCust;
+},
+getNumberofCookiesSoldperHour: function(){
+  for(let i=0;i<operatingHrs.length;i++){
+    let sales= Math.floor(this.avgSale*this.getRandomNumberofCust());
+    limaStoreArr.push(sales)
+    
+  }
+}
+}
+
+
+limaStore.getNumberofCookiesSoldperHour();
+
+console.log(limaStoreArr);
+console.log(limaStore);
+
+const article5 = document.createElement('article');
+parentElement.appendChild(article5);
+
+const h25 = document.createElement('h2');
+h25.textContent = limaStore.location;
+article.appendChild(h25);
+
+const ul5 = document.createElement('ul');
+article.appendChild(ul5);
+
+for (let i = 0; i < operatingHrs.length; i++) {
+  const li = document.createElement('li');
+  li.textContent = operatingHrs[i]+":"+limaStoreArr[i];
+  ul5.appendChild(li);
+}
+
+const li5 = document.createElement('li');
+li5.textContent = `Total ${getTotalSales(limaStoreArr)}`
+ul5.appendChild(li5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
