@@ -1,0 +1,12 @@
+#table{
+  border: outset;
+}
+
+
+td{
+  border: 3px rgb(238, 187, 187) solid;
+}
+
+th{
+  border: 3px rgb(8, 0, 0) solid;
+}
