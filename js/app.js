@@ -90,5 +90,35 @@ function headerRow() {
   tdDailyTotal.textContent = 'Daily Totals';
   row.appendChild(tdDailyTotal);
 }
+function footerRow() {
+  let totalRow = document.createElement('tr');
+  table.appendChild(totalRow);
+  
+  
+  let TotalTd = document.createElement('td');
+  TotalTd.textContent = "Totals";
+  totalRow.appendChild(TotalTd);
+  
+  let grandTotal = 0
+  
+  for (let i = 0; i < operatingHrs.length; i++) {
+    let hourlyTotal = 0
+    for (let j = 0; j < storeLocations.length; j++) {
+      hourlyTotal += storeLocations[j].calcCookiesPerHour[i];
+      grandTotal += hourlyTotal;
+      console.log(grandTotal);
+      console.log(hourlyTotal);
+    }
+    let hourlyTotalTd = document.createElement('td');
+    hourlyTotalTd.textContent = hourlyTotal;
+    totalRow.appendChild(hourlyTotalTd);
+  }
+    let grandTotalTd = document.createElement('td');
+    grandTotalTd.textContent = grandTotal;
+    totalRow.appendChild(grandTotalTd);
+}
+
+
+
 
 footerRow(); 
