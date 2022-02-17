@@ -1,21 +1,25 @@
 #table{
   border: outset;
+  background-color: #934B00;
 }
 
 
 td{
-  border: 3px rgb(238, 187, 187) solid;
+  border: 3px #690500 solid;
 }
 
 th{
-  border: 3px rgb(8, 0, 0) solid;
+  border: 3px #BB6B00 solid;
 }
 
 
 /* test for merging lab a and b */
+body{
+  background-color: #452103;
+}
 
 header{
-  background-color: #444;
+  background-color: #210F04;
   height: 100px;
   margin-bottom: 30px;
 }
@@ -36,7 +40,7 @@ header ul{
 }
 header ul li{
   margin-top: 40px;
-  color: #444;
+  color: #210F04;
 }
 
 a{
