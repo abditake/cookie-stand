@@ -125,23 +125,27 @@ lima.render();
 
 
 
-footerRow(); 
 
 
-let myForm = document.getElementById('form');
+let myform = document.getElementById('NewStoreForm');
 
 
 // window into my form
-myform.addEventListener('submit',handleSubmit);
+myform.addEventListener('submit',addnewshop);
 
 
 
 
 //event function
 
-function handleSubmit(event){
+function addnewshop(event){
   event.preventDefault();
-  let location = event.target.location.value;
-  
-  
+  console.log('im here')
+  let OtherLoc = event.target.location.value;
+  let NewMinCust = parseInt(event.target.minCust.value);
+  let NewMaxCust = parseInt(event.target.maxCust.value);
+  let NewAvgSale = parseInt(event.target.avgSale.value);
+  const anyStore = new Store(OtherLoc,NewMinCust,NewMaxCust,NewAvgSale);
+  anyStore.render();
 }
+footerRow(); 
