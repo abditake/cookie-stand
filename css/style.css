@@ -114,8 +114,13 @@ footer{
   background-color: #444;
   height: 150px;
 }
-footer div{
+footer div {
   display:flex;
   justify-content: space-evenly;
 }
 
+
+/* main form{
+  display: flex;
+  margin: auto;
+} */

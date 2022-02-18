@@ -25,9 +25,9 @@ Store.prototype.getRandomNumberofCust = function () {
 }
 
 Store.prototype.render = function () {
+  this.getNumberofCookiesSoldperHour();
+  
   let storeTotal = 0
-  
-  
   let row = document.createElement('tr');
   table.appendChild(row);
   
@@ -48,31 +48,6 @@ Store.prototype.render = function () {
   row.appendChild(totalCell);
 }
 
-headerRow();
-
-const seattle = new Store('seattle', 23, 65, 6.3);
-seattle.getNumberofCookiesSoldperHour();
-seattle.render();
-
-
-const tokyo = new Store('tokyo', 3, 24, 1.2);
-tokyo.getNumberofCookiesSoldperHour();
-tokyo.render();
-
-
-const dubai = new Store('dubai', 11, 38, 3.7);
-dubai.getNumberofCookiesSoldperHour();
-
-
-
-const paris = new Store('paris', 20, 38, 2.3);
-paris.getNumberofCookiesSoldperHour();
-paris.render();
-
-
-const lima = new Store('lima', 2, 16, 4.6);
-lima.getNumberofCookiesSoldperHour();
-lima.render();
 
 
 function headerRow() {
@@ -90,6 +65,8 @@ function headerRow() {
   tdDailyTotal.textContent = 'Daily Totals';
   row.appendChild(tdDailyTotal);
 }
+
+
 function footerRow() {
   let totalRow = document.createElement('tr');
   table.appendChild(totalRow);
@@ -113,12 +90,62 @@ function footerRow() {
     hourlyTotalTd.textContent = hourlyTotal;
     totalRow.appendChild(hourlyTotalTd);
   }
-    let grandTotalTd = document.createElement('td');
-    grandTotalTd.textContent = grandTotal;
-    totalRow.appendChild(grandTotalTd);
+  let grandTotalTd = document.createElement('td');
+  grandTotalTd.textContent = grandTotal;
+  totalRow.appendChild(grandTotalTd);
 }
 
 
 
 
+//making the header row then creating data then ending it with footer row
+
+headerRow();
+
+
+const seattle = new Store('seattle', 23, 65, 6.3);
+seattle.render();
+
+
+const tokyo = new Store('tokyo', 3, 24, 1.2);
+tokyo.render();
+
+
+const dubai = new Store('dubai', 11, 38, 3.7);
+dubai.render();
+
+
+
+const paris = new Store('paris', 20, 38, 2.3);
+paris.render();
+
+
+const lima = new Store('lima', 2, 16, 4.6);
+lima.render();
+
+
+
+
+
+let myform = document.getElementById('NewStoreForm');
+
+
+// window into my form
+myform.addEventListener('submit',addnewshop);
+
+
+
+
+//event function
+
+function addnewshop(event){
+  event.preventDefault();
+  console.log('im here')
+  let OtherLoc = event.target.location.value;
+  let NewMinCust = parseInt(event.target.minCust.value);
+  let NewMaxCust = parseInt(event.target.maxCust.value);
+  let NewAvgSale = parseInt(event.target.avgSale.value);
+  const anyStore = new Store(OtherLoc,NewMinCust,NewMaxCust,NewAvgSale);
+  anyStore.render();
+}
 footerRow(); 
