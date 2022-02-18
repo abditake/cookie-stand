@@ -105,7 +105,11 @@ main ul{
   margin: auto;
   flex-wrap: wrap;
 }
-
+section div p span{
+  font-style: italic;
+  margin: auto;
+  justify-content: right;
+}
 footer{
   background-color: #444;
   height: 150px;
@@ -115,7 +119,8 @@ footer div {
   justify-content: space-evenly;
 }
 
-main form{
+
+/* main form{
   display: flex;
   margin: auto;
-}
+} */
