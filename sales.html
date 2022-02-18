@@ -15,6 +15,26 @@
     </nav>
   </header>
   <main>
+    <div class="form">
+      <form id="NewStoreForm">
+        <fieldset>
+          <legend>Store Location Form</legend>
+          <label for="location">Shop Location:</label>
+          <input type="text" name="location" id="location"> 
+          
+          <label for="minCust">Minimum Customers per Hour:</label>
+          <input type="number" name="minCust" id="minCust" min="0"> 
+          
+          <label for="maxCust">Maximum Customers per Hour:</label>
+          <input type="number" name="maxCust" id="maxCust" min="0"> 
+          
+          <label for="avgSale">Average Cookies sold per Hour:</label>
+          <input type="number" name="avgSale" id="avgSale" step=".1" min="0"> 
+          
+          <button type="submit">Add Store</button>
+        </fieldset>
+      </form>
+    </div>
     <div id ="cookiesSold">
       <table id="table">
         
