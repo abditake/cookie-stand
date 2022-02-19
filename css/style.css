@@ -51,6 +51,7 @@ a{
 main{
   width: 960px;
   margin: auto;
+  font-family: 'Shizuru', cursive;
 }
 
 main span{

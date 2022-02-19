@@ -1,5 +1,6 @@
 `use strict`;
 const table = document.getElementById('table');
+// let myform = document.getElementById('NewStoreForm');
 let operatingHrs = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm']
 let storeLocations = []
 function Store(location, minCust, maxCust, avgSale) {
@@ -68,7 +69,8 @@ function headerRow() {
 
 
 function footerRow() {
-  let totalRow = document.createElement('tr');
+  // lITERALLY MAKING THIS A TFOOT WAS THE ONLY REASON MY TOTAL ROW WASN'T STAYING AT THE BOTTOM. I FEEL SO STUPID.
+  let totalRow = document.createElement('tfoot');  
   table.appendChild(totalRow);
   
   
@@ -102,32 +104,25 @@ function footerRow() {
 
 headerRow();
 
-
 const seattle = new Store('seattle', 23, 65, 6.3);
 seattle.render();
-
 
 const tokyo = new Store('tokyo', 3, 24, 1.2);
 tokyo.render();
 
-
 const dubai = new Store('dubai', 11, 38, 3.7);
 dubai.render();
-
-
 
 const paris = new Store('paris', 20, 38, 2.3);
 paris.render();
 
-
 const lima = new Store('lima', 2, 16, 4.6);
 lima.render();
 
+footerRow(); 
 
 
 
-
-let myform = document.getElementById('NewStoreForm');
 
 
 // window into my form
@@ -137,7 +132,6 @@ myform.addEventListener('submit',addnewshop);
 
 
 //event function
-
 function addnewshop(event){
   event.preventDefault();
   console.log('im here')
@@ -148,4 +142,3 @@ function addnewshop(event){
   const anyStore = new Store(OtherLoc,NewMinCust,NewMaxCust,NewAvgSale);
   anyStore.render();
 }
-footerRow(); 
