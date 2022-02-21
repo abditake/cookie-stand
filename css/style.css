@@ -34,7 +34,7 @@ nav{
   width: 960;
   margin: auto;
 }
-#side{
+.side{
   float: right;
   width: 150;
   height: 100;
