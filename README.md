@@ -10,3 +10,5 @@
 # Reflections and Comments
 - The hardest part of this was probably setting up the javascript and making each store display their totals and per hour numbers.
 - used javascript to make sure the stores displayed their totals differently as well as when it is refreshed show random numbers.
+
+LiveSite: https://abditake.github.io/cookie-stand/
