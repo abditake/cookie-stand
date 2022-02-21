@@ -14,10 +14,16 @@ th{
 
 
 /* test for merging lab a and b */
-body{
-  background-color: #452103;
+body {
+  background-image: linear-gradient(45deg, transparent 20%, #562c2c 25%, transparent 25%), 
+                    linear-gradient(-45deg, transparent 20%, #f2542d 25%, transparent 25%), 
+                    linear-gradient(-45deg, transparent 75%, #f5dfbb 80%, transparent 0),
+                    radial-gradient(#0e9594 2px, transparent 0);
+  background-size: 30px 30px, 30px 30px;
 }
-
+h1{
+  color: white;
+}
 header{
   background-color: #210F04;
   height: 100px;
@@ -27,6 +33,11 @@ header{
 nav{
   width: 960;
   margin: auto;
+}
+#side{
+  float: right;
+  width: 150;
+  height: 100;
 }
 
 header img{
@@ -111,17 +122,40 @@ section div p span{
   margin: auto;
   justify-content: right;
 }
+
 footer{
+  display:flex;
+  width: max-content;
+  height: max-content;
+}
+footer div{
+  margin:20px;
   background-color: #444;
   height: 150px;
+  border-color: black;
+  border-style: dashed;
+  padding:10px;
 }
-footer div {
-  display:flex;
-  justify-content: space-evenly;
+footer div h4{
+font-family: 'Shizuru', cursive;;
+text-align: left;
+line-height:11px;
+font-size: 12px;
+
+}
+
+#myform{
+display: flex;
+
+}
+
+#myform #NewStoreForm{
+
+background-color:#0e9594;
 }
 
 
-/* main form{
-  display: flex;
-  margin: auto;
-} */
+p{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
